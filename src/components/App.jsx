@@ -55,7 +55,7 @@ export class App extends Component {
     );
   };
   render() {
-    const { filter, contacts } = this.state;
+    const { filter } = this.state;
     const filtredContacts = this.getFiltredContacts();
     return (
       <div className={css.componentsForm}>
@@ -66,6 +66,7 @@ export class App extends Component {
         />
         <h2 className={css.titleContact}>Contact</h2>
         <Filter value={filter} onChange={this.changeFilter} />
+          
         <ContactList contacts={filtredContacts} onDelete={this.deleteContact} />
       </div>
     );
